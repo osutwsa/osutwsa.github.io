@@ -65,8 +65,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: Georgia, "Times New Roman", Times, serif;
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:300px" w3-include-html="home.html"></div>
-
-</body>
 <script>
 // Script to open and close sidenav
 function w3_open() {
@@ -78,7 +76,30 @@ function w3_close() {
     document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
     document.getElementsByClassName("w3-overlay")[0].style.display = "none";
 }
-
+  
+function w3IncludeHTML(cb) {
+  var z, i, elmnt, file, xhttp;
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          elmnt.innerHTML = this.responseText;
+          elmnt.removeAttribute("w3-include-html");
+          w3IncludeHTML(cb);
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      return;
+    }
+  }
+  if (cb) cb();
+}
+  
 w3IncludeHTML();
 function initialize() {
   var myCenter = new google.maps.LatLng(39.99939,-83.02271);
@@ -97,6 +118,7 @@ marker.setMap(map);
 google.maps.event.addDomListener(window, 'load', initialize);
 
 </script>
+</body>
 </html>
 
 
