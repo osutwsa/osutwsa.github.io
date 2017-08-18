@@ -34,37 +34,6 @@
 html,body,h1,h2,h3,h4,h5 {font-family: Georgia, "Times New Roman", Times, serif;}
 .w3-sidenav a,.w3-sidenav h4 {font-weight:bold}
 </style>
-<body class="w3-light-grey w3-content" style="max-width:1600px">
-
-<!-- Sidenav/menu -->
-<nav class="w3-sidenav w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;"><br>
-  <div class="w3-container">
-    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding" title="close menu">
-      <i class="fa fa-remove"></i>
-    </a>
-    <img src="images/2016HomeLogo.png" style="width:100%;" class="w3-round"><br><br>
-    <h4 class="w3-padding-0"><b>OSU TWSA</b></h4>
-  </div>
-  <a href="/index.html" class="w3-padding w3-text-teal">HOME</a> 
-  <a href="/about.html" class="w3-padding">ABOUT</a> 
-  <a href="/officers.html" class="w3-padding">OFFICERS</a> 
-  <a href="/events.html" class="w3-padding">EVENTS & CLUBS</a>
-  <a href="/newStudents.html" class="w3-padding">NEW STUDENTS</a>
-  <a href="/links.html" class="w3-padding">LINKS</a>
-   
-  <div class="w3-section w3-padding-top w3-large">
-    <a href="https://www.facebook.com/groups/305716492841234/" class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-facebook-official"></i> TWSA</a><br>
-    <a href="https://www.facebook.com/groups/1709328312658772/" class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-facebook-official"></i> TWSA Free & For Sale</a><br>
-    <a href="mailto:twsa.osu@gmail.com?CC=shen.824@osu.edu" class="w3-hover-white w3-hover-text-light-blue w3-show-inline-block"><i class="fa fa-envelope"></i> Email Us!</a>
-  </div>
-</nav>
-
-<!-- Overlay effect when opening sidenav on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:300px" w3-include-html="home.html"></div>
-
 <script>
 // Script to open and close sidenav
 function w3_open() {
@@ -95,6 +64,36 @@ marker.setMap(map);
 google.maps.event.addDomListener(window, 'load', initialize);
 
 </script>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidenav/menu -->
+<nav class="w3-sidenav w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="images/2016HomeLogo.png" style="width:100%;" class="w3-round"><br><br>
+    <h4 class="w3-padding-0"><b>OSU TWSA</b></h4>
+  </div>
+  <a href="/index.html" class="w3-padding w3-text-teal">HOME</a> 
+  <a href="/about.html" class="w3-padding">ABOUT</a> 
+  <a href="/officers.html" class="w3-padding">OFFICERS</a> 
+  <a href="/events.html" class="w3-padding">EVENTS & CLUBS</a>
+  <a href="/newStudents.html" class="w3-padding">NEW STUDENTS</a>
+  <a href="/links.html" class="w3-padding">LINKS</a>
+   
+  <div class="w3-section w3-padding-top w3-large">
+    <a href="https://www.facebook.com/groups/305716492841234/" class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-facebook-official"></i> TWSA</a><br>
+    <a href="https://www.facebook.com/groups/1709328312658772/" class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-facebook-official"></i> TWSA Free & For Sale</a><br>
+    <a href="mailto:twsa.osu@gmail.com?CC=shen.824@osu.edu" class="w3-hover-white w3-hover-text-light-blue w3-show-inline-block"><i class="fa fa-envelope"></i> Email Us!</a>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidenav on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px" w3-include-html="home.html"></div>
 
 </body>
 </html>
