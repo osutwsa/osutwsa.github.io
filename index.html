@@ -34,36 +34,7 @@
 html,body,h1,h2,h3,h4,h5 {font-family: Georgia, "Times New Roman", Times, serif;}
 .w3-sidenav a,.w3-sidenav h4 {font-weight:bold}
 </style>
-<script>
-// Script to open and close sidenav
-function w3_open() {
-    document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
-    document.getElementsByClassName("w3-overlay")[0].style.display = "block";
-}
- 
-function w3_close() {
-    document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
-    document.getElementsByClassName("w3-overlay")[0].style.display = "none";
-}
 
-w3IncludeHTML();
-function initialize() {
-  var myCenter = new google.maps.LatLng(39.99939,-83.02271);
-  var mapProp = {
-    center:myCenter,
-    zoom:10,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
-  var marker=new google.maps.Marker({
-    position:myCenter
-  });
-
-marker.setMap(map);
-}
-google.maps.event.addDomListener(window, 'load', initialize);
-
-</script>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
 <!-- Sidenav/menu -->
@@ -96,6 +67,36 @@ google.maps.event.addDomListener(window, 'load', initialize);
 <div class="w3-main" style="margin-left:300px" w3-include-html="home.html"></div>
 
 </body>
+<script>
+// Script to open and close sidenav
+function w3_open() {
+    document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+    document.getElementsByClassName("w3-overlay")[0].style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+    document.getElementsByClassName("w3-overlay")[0].style.display = "none";
+}
+
+w3IncludeHTML();
+function initialize() {
+  var myCenter = new google.maps.LatLng(39.99939,-83.02271);
+  var mapProp = {
+    center:myCenter,
+    zoom:10,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+  var marker=new google.maps.Marker({
+    position:myCenter
+  });
+
+marker.setMap(map);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
 </html>
 
 
