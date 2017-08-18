@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="https://www.w3schools.com/lib/w3data.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <head>
   <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
@@ -76,29 +76,6 @@ function w3_open() {
 function w3_close() {
     document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
     document.getElementsByClassName("w3-overlay")[0].style.display = "none";
-}
-  
-function w3IncludeHTML(cb) {
-  var z, i, elmnt, file, xhttp;
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          elmnt.innerHTML = this.responseText;
-          elmnt.removeAttribute("w3-include-html");
-          w3IncludeHTML(cb);
-        }
-      }      
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      return;
-    }
-  }
-  if (cb) cb();
 }
   
 w3IncludeHTML();
