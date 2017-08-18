@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<title>52 Hz, I love you 哥倫布特映會</title>
+<meta charset="UTF-8">
+<meta name="Keywords" content="52Hz,Columbus,52 Hz, I love you,OSU,TWSA">
+<meta name="description" content="52 Hz, I love you 哥倫布特映會">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+body.en :lang(zh) {
+  display: none;
+}
+body.zh :lang(en) {
+  display: none;
+}
+</style>
+
+<!-- jquery -->
+<script src="jquery.js"></script> 
+<script> 
+$(function(){
+  $("#englishContent").load("english.html"); 
+});
+$(function(){
+  $("#chineseContent").load("chinese.html"); 
+});
+</script> 
+
+<body class="zh">
+
+<div id="chineseContent" lang="zh"></div>
+<div id="englishContent" lang="en"></div>
+
+<!-- Add Google Maps -->
+<div id="googleMap" style="height:600px;filter:grayscale(90%);-webkit-filter:grayscale(90%);padding-top:46px;"></div>
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <a href="https://www.facebook.com/events/1838982989656375/" class="w3-hover-text-indigo"><i class="fa fa-facebook-official"></i></a>
+  <p class="w3-medium">Powered by <a href="http://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <p class="w3-medium">Designed by Kevin Shen <br>Last update: 10/15/2016 </p> 
+</footer>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(40.000731, -83.015483);
+var myCenter2 = new google.maps.LatLng(40.002910, -83.017201);
+var mapCenter = new google.maps.LatLng(40.002236, -83.015483);
+    
+function initialize() {
+    var mapProp = {
+    center: mapCenter,
+    zoom: 17,
+    scrollwheel: false,
+    draggable: false,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+    
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    
+var contentString = '<h5>特映會地點</h5>'+
+    '<p><b>Independence Hall 100</b></p>'+
+    '<p><b>1923 Neil Ave Mall, Columbus, Ohio, 43210</b></p>';
+
+var contentString2 = '<h5>Parking Place</h5>'+
+    '<p><b>Tuttle Park Place Garage</b></p>'+
+    '<p><b>2050 Tuttle Park Pl, Columbus, OH 43210</b></p>';
+
+var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+var infowindow2 = new google.maps.InfoWindow({
+    content: contentString2
+  });
+
+var marker = new google.maps.Marker({
+    position: myCenter,
+});
+
+var marker2 = new google.maps.Marker({
+    position: myCenter2,
+}); 
+    
+marker.setMap(map);
+marker2.setMap(map);
+infowindow.open(map, marker);
+infowindow2.open(map, marker2);
+}
+    
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<script>
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction_zh() {
+    var x = document.getElementById("navDemo_zh");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+var modal_zh = document.getElementById('ticketModal_zh');
+window.onclick = function(event) {
+  if (event.target == modal_zh) {
+    modal_zh.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>
+
+
+
+
