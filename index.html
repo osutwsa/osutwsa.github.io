@@ -32,13 +32,13 @@
 </head>
 <style>
 html,body,h1,h2,h3,h4,h5 {font-family: Georgia, "Times New Roman", Times, serif;}
-.w3-sidenav a,.w3-sidenav h4 {font-weight:bold}
+.w3-sidebar a,.w3-sidebar h4 {font-weight:bold}
 </style>
 
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
 <!-- Sidenav/menu -->
-<nav class="w3-sidenav w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;"><br>
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;"><br>
   <div class="w3-container">
     <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding" title="close menu">
       <i class="fa fa-remove"></i>
@@ -54,10 +54,11 @@ html,body,h1,h2,h3,h4,h5 {font-family: Georgia, "Times New Roman", Times, serif;
     <a href="/newStudents.html" class="w3-bar-item w3-button w3-padding">NEW STUDENTS</a>
     <a href="/links.html" class="w3-bar-item w3-button w3-padding">LINKS</a>
   </div>
-  <div class="w3-panel w3-large">
-    <a href="https://www.facebook.com/groups/305716492841234/" class="w3-hover-white w3-hover-indigo w3-show-inline-block"><i class="fa fa-facebook-official"></i> TWSA</a><br>
-    <a href="https://www.facebook.com/groups/1709328312658772/" class="w3-hover-white w3-hover-indigo w3-show-inline-block"><i class="fa fa-facebook-official"></i> TWSA Free & For Sale</a><br>
-    <a href="mailto:twsa.osu@gmail.com?CC=shen.824@osu.edu" class="w3-hover-white w3-hover-light-blue w3-show-inline-block"><i class="fa fa-envelope"></i> Email Us!</a>
+   
+  <div class="w3-section w3-padding w3-large">
+    <a href="https://www.facebook.com/groups/305716492841234/" class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-facebook-official"></i> TWSA</a><br>
+    <a href="https://www.facebook.com/groups/1709328312658772/" class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-facebook-official"></i> TWSA Free & For Sale</a><br>
+    <a href="mailto:twsa.osu@gmail.com?CC=shen.824@osu.edu" class="w3-hover-white w3-hover-text-light-blue w3-show-inline-block"><i class="fa fa-envelope"></i> Email Us!</a>
   </div>
 </nav>
 
@@ -69,12 +70,12 @@ html,body,h1,h2,h3,h4,h5 {font-family: Georgia, "Times New Roman", Times, serif;
 <script>
 // Script to open and close sidenav
 function w3_open() {
-    document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+    document.getElementsByClassName("w3-sidebar")[0].style.display = "block";
     document.getElementsByClassName("w3-overlay")[0].style.display = "block";
 }
  
 function w3_close() {
-    document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+    document.getElementsByClassName("w3-sidebar")[0].style.display = "none";
     document.getElementsByClassName("w3-overlay")[0].style.display = "none";
 }
   

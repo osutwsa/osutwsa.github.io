@@ -32,12 +32,12 @@
 
 <style>
 html,body,h1,h2,h3,h4,h5 {font-family: Georgia, "Times New Roman", Times, serif;}
-.w3-sidenav a,.w3-sidenav h4 {font-weight:bold}
+.w3-sidebar a,.w3-sidebar h4 {font-weight:bold}
 </style>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
 <!-- Sidenav/menu -->
-<nav class="w3-sidenav w3-collapse w3-white" style="z-index:3;width:300px;"><br>
+<nav class="w3-sidebar w3-collapse w3-white" style="z-index:3;width:300px;"><br>
   <div class="w3-container">
     <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding" title="close menu">
       <i class="fa fa-remove"></i>
@@ -45,14 +45,16 @@ html,body,h1,h2,h3,h4,h5 {font-family: Georgia, "Times New Roman", Times, serif;
     <img src="images/2016HomeLogo.png" style="width:100%;" class="w3-round"><br><br>
     <h4 class="w3-padding-0"><b>OSU TWSA</b></h4>
   </div>
-  <a href="/index.html" class="w3-padding">HOME</a> 
-  <a href="/about.html" class="w3-padding w3-text-teal">ABOUT</a> 
-  <a href="/officers.html" class="w3-padding">OFFICERS</a> 
-  <a href="/events.html" class="w3-padding">EVENTS & CLUBS</a>
-  <a href="/newStudents.html" class="w3-padding">NEW STUDENTS</a>
-  <a href="/links.html" class="w3-padding">LINKS</a>
+  <div class="w3-bar-block">
+    <a href="/index.html" class="w3-bar-item w3-button w3-padding">HOME</a> 
+    <a href="/about.html" class="w3-bar-item w3-button w3-padding w3-text-teal">ABOUT</a> 
+    <a href="/officers.html" class="w3-bar-item w3-button w3-padding">OFFICERS</a> 
+    <a href="/events.html" class="w3-bar-item w3-button w3-padding">EVENTS & CLUBS</a>
+    <a href="/newStudents.html" class="w3-bar-item w3-button w3-padding">NEW STUDENTS</a>
+    <a href="/links.html" class="w3-bar-item w3-button w3-padding">LINKS</a>
+  </div>
    
-  <div class="w3-section w3-padding-top w3-large">
+  <div class="w3-section w3-padding w3-large">
     <a href="https://www.facebook.com/groups/305716492841234/" class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-facebook-official"></i> TWSA</a><br>
     <a href="https://www.facebook.com/groups/1709328312658772/" class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-facebook-official"></i> TWSA Free & For Sale</a><br>
     <a href="mailto:twsa.osu@gmail.com?CC=shen.824@osu.edu" class="w3-hover-white w3-hover-text-light-blue w3-show-inline-block"><i class="fa fa-envelope"></i> Email Us!</a>
@@ -100,8 +102,8 @@ a:hover{text-decoration: underline}
     <span class="w3-margin-right">The Ohio State University Taiwanese Student Association (OSU TWSA)</span> 
     <div class="w3-section w3-bottombar"></div>
     <div class="w3-section">
-      <a href="#intro"><button class="w3-btn"><i class="fa fa-university w3-margin-right"></i> 社團簡介</button></a>
-      <a href="#constitution"><button class="w3-btn w3-white"><i class="fa fa-pencil w3-margin-right"></i>組織章程</button></a>
+      <a href="#intro"><button class="w3-button w3-black"><i class="fa fa-university w3-margin-right"></i> 社團簡介</button></a>
+      <a href="#constitution"><button class="w3-button w3-white"><i class="fa fa-pencil w3-margin-right"></i>組織章程</button></a>
     </div>
   </header>
 
@@ -127,10 +129,10 @@ a:hover{text-decoration: underline}
     <div class="w3-section w3-bottombar"></div>
     <p class="style2" id="constitution" style="text-align:center"><b>組織章程</b></p>
     <div style="text-align:center">    
-      <a href="/PDFs/Constitution_of_TWSA.pdf"><button class="w3-btn "><i class="fa fa-file-powerpoint-o w3-margin-right"></i>下載章程</button></a>
+      <a href="/PDFs/Constitution_of_TWSA.pdf"><button class="w3-button w3-black"><i class="fa fa-file-powerpoint-o w3-margin-right"></i>下載章程</button></a>
     </div>
     <p>
-<footer class="w3-container w3-padding-32 w3-white" style="text-align:left">
+  <footer class="w3-container w3-padding-32 w3-white" style="text-align:left">
     <div class="w3-row-padding">
       <div class="w3-half">
         <h3>WHERE ARE WE?</h3>
@@ -143,30 +145,30 @@ a:hover{text-decoration: underline}
          
           For questions or collaboration opportunities, please email our president or vice presidents.
           For sponsorship opportunities, please contact our treasurer.<br><br>
-          <a href="/officers.html"><button class="w3-btn" >Officers  <i class="fa fa-angle-double-right w3-margin-right"></i> </button> </a>
+          <a href="/officers.html"><button class="w3-button w3-black" >Officers  <i class="fa fa-angle-double-right w3-margin-right"></i> </button> </a>
         </p>
         <p>
           <hr size=2 color=#A0522D>
-          <font size="1" face="Verdana">Copyright © 2016 - All Rights Reserved <br>
+          <font size="1" face="Verdana">Copyright © 2018 - All Rights Reserved <br>
           The Ohio State University Taiwanese Student Association <br>
           Website redesigned by Kevin Shen using W3.CSS Template<br>
-          Last Update: 05/24/2016</font>
+          Last Update: 07/17/2018</font>
         </p>
       </div>
 
     </div>
-    </footer>
+  </footer>
     
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDT-t98SReMpcO8KmRHkQmthe3cWIZ_T6E"></script>
     <script>
     // Script to open and close sidenav
     function w3_open() {
-        document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+        document.getElementsByClassName("w3-sidebar")[0].style.display = "block";
         document.getElementsByClassName("w3-overlay")[0].style.display = "block";
     }
      
     function w3_close() {
-        document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+        document.getElementsByClassName("w3-sidebar")[0].style.display = "none";
         document.getElementsByClassName("w3-overlay")[0].style.display = "none";
     }
     function initialize() {
